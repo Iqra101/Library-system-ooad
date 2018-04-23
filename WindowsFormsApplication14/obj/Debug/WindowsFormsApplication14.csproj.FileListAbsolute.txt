@@ -29,3 +29,6 @@ C:\Users\maryam\Desktop\Rename\Library-system-ooad\WindowsFormsApplication14\obj
 C:\Users\maryam\Desktop\Rename\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Sign_Up.resources
 C:\Users\maryam\Desktop\Rename\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Userlogin.resources
 C:\Users\maryam\Desktop\Rename\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csproj.GenerateResource.Cache
+C:\Users\Hussaini Computers\Desktop\New folder (2)\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe.config
+C:\Users\Hussaini Computers\Desktop\New folder (2)\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.exe
+C:\Users\Hussaini Computers\Desktop\New folder (2)\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.pdb
