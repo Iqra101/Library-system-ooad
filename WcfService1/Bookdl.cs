@@ -22,9 +22,18 @@ namespace WcfService1
         {
 
         }
-        public static bool UpdateQuantity(Book b)
+        public static bool UpdateQuantity(string name, string Location, string quantity)
         {
-            return false;
+            bool isUpdated = false;
+            foreach(Book b in Library)
+            {
+                if(b.Name==name && b.Location==Location)
+                {
+                    b.Quantity = quantity;
+                    isUpdated = true;
+                }
+            }
+            return isUpdated;
         }
         public static bool DeleteBookFromLib(string name, string Location)
         {

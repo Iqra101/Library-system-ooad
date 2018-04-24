@@ -110,6 +110,12 @@
     <Compile Include="Update Library Date.Designer.cs">
       <DependentUpon>Update Library Date.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update Quantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Quantity.Designer.cs">
+      <DependentUpon>Update Quantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Userlogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update Library Date.resx">
       <DependentUpon>Update Library Date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Quantity.resx">
+      <DependentUpon>Update Quantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Userlogin.resx">
       <DependentUpon>Userlogin.cs</DependentUpon>

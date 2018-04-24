@@ -31,7 +31,9 @@ namespace WindowsFormsApplication14
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Update_Quantity uq = new Update_Quantity();
+            this.Hide();
+            uq.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

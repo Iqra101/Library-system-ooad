@@ -16,6 +16,8 @@ namespace WcfService1
         void AddBookToLib(string name, string Location, string Quantity);
         [OperationContract]
         bool DeleteBookFromLib(string name, string Location);
+        [OperationContract]
+        bool UpdateQuantity(string name, string Location, string quantity);
 
         [OperationContract]
         bool forgetpassword(string username, string question, string answer);

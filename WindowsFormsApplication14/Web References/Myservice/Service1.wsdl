@@ -19,6 +19,12 @@
   <wsdl:message name="IService1_DeleteBookFromLib_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteBookFromLibResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_UpdateQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuantityResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_forgetpassword_InputMessage">
     <wsdl:part name="parameters" element="tns:forgetpassword" />
   </wsdl:message>
@@ -70,6 +76,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteBookFromLib" message="tns:IService1_DeleteBookFromLib_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteBookFromLibResponse" message="tns:IService1_DeleteBookFromLib_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="UpdateQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateQuantity" message="tns:IService1_UpdateQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateQuantityResponse" message="tns:IService1_UpdateQuantity_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="forgetpassword">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/forgetpassword" message="tns:IService1_forgetpassword_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/forgetpasswordResponse" message="tns:IService1_forgetpassword_OutputMessage" />
@@ -112,6 +122,15 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteBookFromLib">
       <soap:operation soapAction="http://tempuri.org/IService1/DeleteBookFromLib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuantity">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateQuantity" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

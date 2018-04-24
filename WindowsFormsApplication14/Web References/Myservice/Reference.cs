@@ -33,6 +33,8 @@ namespace WindowsFormsApplication14.Myservice {
         
         private System.Threading.SendOrPostCallback DeleteBookFromLibOperationCompleted;
         
+        private System.Threading.SendOrPostCallback UpdateQuantityOperationCompleted;
+        
         private System.Threading.SendOrPostCallback forgetpasswordOperationCompleted;
         
         private System.Threading.SendOrPostCallback registrationOperationCompleted;
@@ -90,6 +92,9 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event DeleteBookFromLibCompletedEventHandler DeleteBookFromLibCompleted;
+        
+        /// <remarks/>
+        public event UpdateQuantityCompletedEventHandler UpdateQuantityCompleted;
         
         /// <remarks/>
         public event forgetpasswordCompletedEventHandler forgetpasswordCompleted;
@@ -173,6 +178,40 @@ namespace WindowsFormsApplication14.Myservice {
             if ((this.DeleteBookFromLibCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.DeleteBookFromLibCompleted(this, new DeleteBookFromLibCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/UpdateQuantity", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void UpdateQuantity([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string quantity, out bool UpdateQuantityResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateQuantityResultSpecified) {
+            object[] results = this.Invoke("UpdateQuantity", new object[] {
+                        name,
+                        Location,
+                        quantity});
+            UpdateQuantityResult = ((bool)(results[0]));
+            UpdateQuantityResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void UpdateQuantityAsync(string name, string Location, string quantity) {
+            this.UpdateQuantityAsync(name, Location, quantity, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateQuantityAsync(string name, string Location, string quantity, object userState) {
+            if ((this.UpdateQuantityOperationCompleted == null)) {
+                this.UpdateQuantityOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateQuantityOperationCompleted);
+            }
+            this.InvokeAsync("UpdateQuantity", new object[] {
+                        name,
+                        Location,
+                        quantity}, this.UpdateQuantityOperationCompleted, userState);
+        }
+        
+        private void OnUpdateQuantityOperationCompleted(object arg) {
+            if ((this.UpdateQuantityCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateQuantityCompleted(this, new UpdateQuantityCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -497,6 +536,40 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public bool DeleteBookFromLibResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void UpdateQuantityCompletedEventHandler(object sender, UpdateQuantityCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateQuantityCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateQuantityCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool UpdateQuantityResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool UpdateQuantityResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
