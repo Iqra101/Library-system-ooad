@@ -23,11 +23,11 @@ namespace WcfService1
         }
         public static bool UpdateQuantity(Book b)
         {
-            return false;
+            
         }
         public static bool DeleteBookFromLib(string name, string Location)
         {
-            return false;
+            
 
         }
         public static void DeleteBookFromMar(Book b)

@@ -10,3 +10,6 @@ C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\o
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\bin\WcfService1.dll.config
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\bin\WcfService1.dll
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\bin\WcfService1.pdb
+E:\jjjj\Library-system-ooad\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+E:\jjjj\Library-system-ooad\WcfService1\obj\Debug\WcfService1.dll
+E:\jjjj\Library-system-ooad\WcfService1\obj\Debug\WcfService1.pdb
