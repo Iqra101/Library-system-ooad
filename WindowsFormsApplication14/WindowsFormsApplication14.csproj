@@ -84,6 +84,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Issue Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Issue Book.Designer.cs">
+      <DependentUpon>Issue Book.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reset Password.cs">
@@ -103,12 +109,6 @@
     </Compile>
     <Compile Include="Update Library Data.Designer.cs">
       <DependentUpon>Update Library Data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Update Library Date.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Update Library Date.Designer.cs">
-      <DependentUpon>Update Library Date.cs</DependentUpon>
     </Compile>
     <Compile Include="Update Quantity.cs">
       <SubType>Form</SubType>
@@ -145,6 +145,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Issue Book.resx">
+      <DependentUpon>Issue Book.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -162,9 +165,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update Library Data.resx">
       <DependentUpon>Update Library Data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Update Library Date.resx">
-      <DependentUpon>Update Library Date.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Quantity.resx">
       <DependentUpon>Update Quantity.cs</DependentUpon>

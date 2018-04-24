@@ -35,6 +35,21 @@ namespace WcfService1
             }
             return isUpdated;
         }
+        public static bool IssueBook(string name, string Location, string quantity)
+        {
+            bool issue = false;
+            foreach (Book b in Library)
+            {
+                if (b.Name == name && b.Location == Location)
+                {
+                    int Quantity = int.Parse(b.Quantity);
+                    Quantity--;
+                    b.Quantity = quantity.ToString();
+                    issue = true;
+                }
+            }
+            return issue;
+        }
         public static bool DeleteBookFromLib(string name, string Location)
         {
             bool isFound = false;

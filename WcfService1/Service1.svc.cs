@@ -29,6 +29,10 @@ namespace WcfService1
         {
             return Bookdl.UpdateQuantity(name, Location, quantity);
         }
+        public bool IssueBook(string name, string Location, string Quantity)
+        {
+            return Bookdl.IssueBook(name, Location, Quantity);
+        }
         public bool forgetpassword(string username, string question, string answer)
         {
             bool isFound = false;

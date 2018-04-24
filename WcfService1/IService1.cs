@@ -15,6 +15,8 @@ namespace WcfService1
         [OperationContract]
         void AddBookToLib(string name, string Location, string Quantity);
         [OperationContract]
+        bool IssueBook(string name, string Location, string quantity);
+        [OperationContract]
         bool DeleteBookFromLib(string name, string Location);
         [OperationContract]
         bool UpdateQuantity(string name, string Location, string quantity);

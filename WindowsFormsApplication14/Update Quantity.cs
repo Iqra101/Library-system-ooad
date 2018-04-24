@@ -19,7 +19,7 @@ namespace WindowsFormsApplication14
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Delete_Books_From_Library dl = new Delete_Books_From_Library();
+           Update_Library_Data dl = new Update_Library_Data();
             this.Hide();
             dl.Show();
         }
