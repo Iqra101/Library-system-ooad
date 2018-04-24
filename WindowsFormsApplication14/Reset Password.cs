@@ -27,6 +27,8 @@ namespace WindowsFormsApplication14
             Myservice.Service1 myserver = new Myservice.Service1();
             myserver.resetpassword(textBox1.Text, textBox2.Text);
             MessageBox.Show("Your password has been reset");
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -12,6 +12,20 @@ namespace WcfService1
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public void AddBookToLib(string name, string Location, string Quantity)
+        {
+            Book b = new Book();
+            b.Name = name;
+            b.Location = Location;
+            b.Quantity = Quantity;
+            Bookdl.AddBookToLib(b);
+        }
+
+        public bool DeleteBookFromLib(string name, string Location)
+        {
+            return Bookdl.DeleteBookFromLib(name, Location);
+        }
+
         public bool forgetpassword(string username, string question, string answer)
         {
             bool isFound = false;

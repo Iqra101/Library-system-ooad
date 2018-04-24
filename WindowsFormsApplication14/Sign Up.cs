@@ -34,6 +34,10 @@ namespace WindowsFormsApplication14
             Myservice.Service1 myserver = new Myservice.Service1();
             myserver.registration(textBox1.Text, textBox2.Text,comboBox1.Text, textBox3.Text);
             MessageBox.Show("user registered");
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            comboBox1.Text="";
         }
     }
 }

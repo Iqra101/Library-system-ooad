@@ -29,6 +29,10 @@ namespace WindowsFormsApplication14.Myservice {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
     public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback AddBookToLibOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteBookFromLibOperationCompleted;
+        
         private System.Threading.SendOrPostCallback forgetpasswordOperationCompleted;
         
         private System.Threading.SendOrPostCallback registrationOperationCompleted;
@@ -82,6 +86,12 @@ namespace WindowsFormsApplication14.Myservice {
         }
         
         /// <remarks/>
+        public event AddBookToLibCompletedEventHandler AddBookToLibCompleted;
+        
+        /// <remarks/>
+        public event DeleteBookFromLibCompletedEventHandler DeleteBookFromLibCompleted;
+        
+        /// <remarks/>
         public event forgetpasswordCompletedEventHandler forgetpasswordCompleted;
         
         /// <remarks/>
@@ -101,6 +111,70 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddBookToLib", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AddBookToLib([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Quantity) {
+            this.Invoke("AddBookToLib", new object[] {
+                        name,
+                        Location,
+                        Quantity});
+        }
+        
+        /// <remarks/>
+        public void AddBookToLibAsync(string name, string Location, string Quantity) {
+            this.AddBookToLibAsync(name, Location, Quantity, null);
+        }
+        
+        /// <remarks/>
+        public void AddBookToLibAsync(string name, string Location, string Quantity, object userState) {
+            if ((this.AddBookToLibOperationCompleted == null)) {
+                this.AddBookToLibOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddBookToLibOperationCompleted);
+            }
+            this.InvokeAsync("AddBookToLib", new object[] {
+                        name,
+                        Location,
+                        Quantity}, this.AddBookToLibOperationCompleted, userState);
+        }
+        
+        private void OnAddBookToLibOperationCompleted(object arg) {
+            if ((this.AddBookToLibCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddBookToLibCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/DeleteBookFromLib", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void DeleteBookFromLib([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Location, out bool DeleteBookFromLibResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DeleteBookFromLibResultSpecified) {
+            object[] results = this.Invoke("DeleteBookFromLib", new object[] {
+                        name,
+                        Location});
+            DeleteBookFromLibResult = ((bool)(results[0]));
+            DeleteBookFromLibResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void DeleteBookFromLibAsync(string name, string Location) {
+            this.DeleteBookFromLibAsync(name, Location, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteBookFromLibAsync(string name, string Location, object userState) {
+            if ((this.DeleteBookFromLibOperationCompleted == null)) {
+                this.DeleteBookFromLibOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteBookFromLibOperationCompleted);
+            }
+            this.InvokeAsync("DeleteBookFromLib", new object[] {
+                        name,
+                        Location}, this.DeleteBookFromLibOperationCompleted, userState);
+        }
+        
+        private void OnDeleteBookFromLibOperationCompleted(object arg) {
+            if ((this.DeleteBookFromLibCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteBookFromLibCompleted(this, new DeleteBookFromLibCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/forgetpassword", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -388,6 +462,44 @@ namespace WindowsFormsApplication14.Myservice {
             }
             set {
                 this.stringValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void AddBookToLibCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void DeleteBookFromLibCompletedEventHandler(object sender, DeleteBookFromLibCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteBookFromLibCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteBookFromLibCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool DeleteBookFromLibResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool DeleteBookFromLibResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
             }
         }
     }

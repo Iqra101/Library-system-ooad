@@ -43,6 +43,8 @@ namespace WindowsFormsApplication14
             {
                 MessageBox.Show("invaliduser");
             }
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

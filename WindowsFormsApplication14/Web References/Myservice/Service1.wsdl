@@ -7,6 +7,18 @@
       <xsd:import schemaLocation="http://localhost:18885/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_AddBookToLib_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBookToLib" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddBookToLib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBookToLibResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteBookFromLib_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookFromLib" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteBookFromLib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookFromLibResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_forgetpassword_InputMessage">
     <wsdl:part name="parameters" element="tns:forgetpassword" />
   </wsdl:message>
@@ -50,6 +62,14 @@
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="AddBookToLib">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddBookToLib" message="tns:IService1_AddBookToLib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddBookToLibResponse" message="tns:IService1_AddBookToLib_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBookFromLib">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteBookFromLib" message="tns:IService1_DeleteBookFromLib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteBookFromLibResponse" message="tns:IService1_DeleteBookFromLib_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="forgetpassword">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/forgetpassword" message="tns:IService1_forgetpassword_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/forgetpasswordResponse" message="tns:IService1_forgetpassword_OutputMessage" />
@@ -81,6 +101,24 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddBookToLib">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddBookToLib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBookFromLib">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteBookFromLib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="forgetpassword">
       <soap:operation soapAction="http://tempuri.org/IService1/forgetpassword" style="document" />
       <wsdl:input>

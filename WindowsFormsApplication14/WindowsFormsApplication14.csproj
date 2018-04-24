@@ -48,11 +48,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Books To Library.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Books To Library.Designer.cs">
+      <DependentUpon>Add Books To Library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="adminLogin.Designer.cs">
       <DependentUpon>adminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete Books From Library.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Books From Library.Designer.cs">
+      <DependentUpon>Delete Books From Library.cs</DependentUpon>
     </Compile>
     <Compile Include="Forget Password.cs">
       <SubType>Form</SubType>
@@ -80,6 +98,18 @@
     <Compile Include="Sign Up.Designer.cs">
       <DependentUpon>Sign Up.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update Library Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Library Data.Designer.cs">
+      <DependentUpon>Update Library Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Library Date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Library Date.Designer.cs">
+      <DependentUpon>Update Library Date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Userlogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,8 +121,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add Books To Library.resx">
+      <DependentUpon>Add Books To Library.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx">
       <DependentUpon>adminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete Books From Library.resx">
+      <DependentUpon>Delete Books From Library.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forget Password.resx">
       <DependentUpon>Forget Password.cs</DependentUpon>
@@ -114,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sign Up.resx">
       <DependentUpon>Sign Up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Library Data.resx">
+      <DependentUpon>Update Library Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Library Date.resx">
+      <DependentUpon>Update Library Date.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Userlogin.resx">
       <DependentUpon>Userlogin.cs</DependentUpon>

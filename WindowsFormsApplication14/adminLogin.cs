@@ -25,11 +25,15 @@ namespace WindowsFormsApplication14
             myserver.isvalidAdmin(textBox1.Text, textBox2.Text, out isvalidadmin, out isvalidadminpassed);
             if(isvalidadmin == true)
             {
-                MessageBox.Show("valid Admin");
+                Admin a = new Admin();
+                this.Hide();
+                a.Show();
             }
             else
             {
                 MessageBox.Show("Not valid");
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
         }
 

@@ -13,6 +13,11 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
+        void AddBookToLib(string name, string Location, string Quantity);
+        [OperationContract]
+        bool DeleteBookFromLib(string name, string Location);
+
+        [OperationContract]
         bool forgetpassword(string username, string question, string answer);
         [OperationContract]
         void registration(string username, string password, string q, string a);

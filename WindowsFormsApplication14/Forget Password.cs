@@ -38,6 +38,9 @@ namespace WindowsFormsApplication14
             if (isvalid == false)
             {
                 MessageBox.Show("invalid answer");
+                textBox1.Text = "";
+                textBox2.Text = "";
+                comboBox1.Text = "";
                
             }
             else

@@ -11,6 +11,7 @@ namespace WcfService1
         public static List<Book> Market = new List<Book>();
         public static void AddBookToLib(Book b)
         {
+            Library.Add(b);
             
         }
         public static void AddBookToMar(Book b)
@@ -23,11 +24,22 @@ namespace WcfService1
         }
         public static bool UpdateQuantity(Book b)
         {
-            
+            return false;
         }
         public static bool DeleteBookFromLib(string name, string Location)
         {
-            
+            bool isFound = false;
+            foreach (Book b in Library)
+            {
+                if (b.Name == name && b.Location == Location)
+                {
+                    Library.Remove(b);
+                    isFound = true;
+                    break;
+                }
+            }
+            return isFound;
+
 
         }
         public static void DeleteBookFromMar(Book b)

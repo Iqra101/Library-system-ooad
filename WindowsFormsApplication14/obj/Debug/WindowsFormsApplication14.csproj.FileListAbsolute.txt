@@ -49,3 +49,8 @@ C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsA
 E:\jjjj\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe.config
 E:\jjjj\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.exe
 E:\jjjj\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.pdb
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Add_Books_To_Library.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Admin.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Delete_Books_From_Library.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Library_Data.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Library_Date.resources
