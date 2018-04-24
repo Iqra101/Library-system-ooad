@@ -25,7 +25,7 @@ namespace WcfService1
         {
 
         }
-        public static void DeleteBookFromLib(Book b)
+        public static void DeleteBookFromLib(string name, string Location)
         {
 
         }
