@@ -21,17 +21,18 @@ namespace WcfService1
         {
 
         }
-        public static void UpdateQuantity(Book b)
+        public static bool UpdateQuantity(Book b)
         {
-
+            return false;
         }
-        public static void DeleteBookFromLib(string name, string Location)
+        public static bool DeleteBookFromLib(string name, string Location)
         {
+            return false;
 
         }
         public static void DeleteBookFromMar(Book b)
         {
-
+            
         }
         public static List<Book> SearchBookFromLibrary(string name)
         {

@@ -7,6 +7,6 @@ namespace WcfService1
 {
     public class IssueBook
     {
-        public static List<Book> = new List<Book>();
+        public static List<Book> issueBook= new List<Book>();
     }
 }

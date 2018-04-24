@@ -8,8 +8,8 @@ namespace WcfService1
     public class Book
     {
         private string name;
-        private int price;
-        private int quantity;
+        private string price;
+        private string quantity;
         private string location;
 
         public string Name
@@ -25,7 +25,22 @@ namespace WcfService1
             }
         }
 
-        public int Price
+       
+     
+        public string Location
+        {
+            get
+            {
+                return location;
+            }
+
+            set
+            {
+                location = value;
+            }
+        }
+
+        public string Price
         {
             get
             {
@@ -38,7 +53,7 @@ namespace WcfService1
             }
         }
 
-        public int Quantity
+        public string Quantity
         {
             get
             {
@@ -48,19 +63,6 @@ namespace WcfService1
             set
             {
                 quantity = value;
-            }
-        }
-
-        public string Location
-        {
-            get
-            {
-                return location;
-            }
-
-            set
-            {
-                location = value;
             }
         }
     }

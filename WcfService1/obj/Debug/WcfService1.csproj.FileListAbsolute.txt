@@ -4,3 +4,9 @@ c:\users\hussaini computers\documents\visual studio 2015\Projects\WcfService1\Wc
 c:\users\hussaini computers\documents\visual studio 2015\Projects\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
 c:\users\hussaini computers\documents\visual studio 2015\Projects\WcfService1\WcfService1\obj\Debug\WcfService1.dll
 c:\users\hussaini computers\documents\visual studio 2015\Projects\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\bin\WcfService1.dll.config
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\bin\WcfService1.dll
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WcfService1\bin\WcfService1.pdb
