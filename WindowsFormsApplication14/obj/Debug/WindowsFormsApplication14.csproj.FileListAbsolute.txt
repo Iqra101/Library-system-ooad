@@ -94,3 +94,6 @@ C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsA
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Issue_Book.resources
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Market_Data.resources
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Quantity.resources
+C:\Users\Hussaini Computers\Desktop\New folder (3)\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe.config
+C:\Users\Hussaini Computers\Desktop\New folder (3)\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.exe
+C:\Users\Hussaini Computers\Desktop\New folder (3)\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.pdb
