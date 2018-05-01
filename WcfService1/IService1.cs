@@ -13,6 +13,8 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
+        void AddBooksToMar(string name, string location, string price);
+        [OperationContract]
         void AddBookToLib(string name, string Location, string Quantity);
         [OperationContract]
         bool IssueBook(string name, string Location, string quantity);

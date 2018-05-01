@@ -29,6 +29,8 @@ namespace WindowsFormsApplication14.Myservice {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
     public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback AddBooksToMarOperationCompleted;
+        
         private System.Threading.SendOrPostCallback AddBookToLibOperationCompleted;
         
         private System.Threading.SendOrPostCallback IssueBookOperationCompleted;
@@ -90,6 +92,9 @@ namespace WindowsFormsApplication14.Myservice {
         }
         
         /// <remarks/>
+        public event AddBooksToMarCompletedEventHandler AddBooksToMarCompleted;
+        
+        /// <remarks/>
         public event AddBookToLibCompletedEventHandler AddBookToLibCompleted;
         
         /// <remarks/>
@@ -121,6 +126,38 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddBooksToMar", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AddBooksToMar([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string price) {
+            this.Invoke("AddBooksToMar", new object[] {
+                        name,
+                        location,
+                        price});
+        }
+        
+        /// <remarks/>
+        public void AddBooksToMarAsync(string name, string location, string price) {
+            this.AddBooksToMarAsync(name, location, price, null);
+        }
+        
+        /// <remarks/>
+        public void AddBooksToMarAsync(string name, string location, string price, object userState) {
+            if ((this.AddBooksToMarOperationCompleted == null)) {
+                this.AddBooksToMarOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddBooksToMarOperationCompleted);
+            }
+            this.InvokeAsync("AddBooksToMar", new object[] {
+                        name,
+                        location,
+                        price}, this.AddBooksToMarOperationCompleted, userState);
+        }
+        
+        private void OnAddBooksToMarOperationCompleted(object arg) {
+            if ((this.AddBooksToMarCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddBooksToMarCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddBookToLib", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -543,6 +580,10 @@ namespace WindowsFormsApplication14.Myservice {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void AddBooksToMarCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]

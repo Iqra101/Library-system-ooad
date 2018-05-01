@@ -54,6 +54,12 @@
     <Compile Include="Add Books To Library.Designer.cs">
       <DependentUpon>Add Books To Library.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add Books To Market.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Books To Market.Designer.cs">
+      <DependentUpon>Add Books To Market.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     <Compile Include="Update Library Data.Designer.cs">
       <DependentUpon>Update Library Data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update Market Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Market Data.Designer.cs">
+      <DependentUpon>Update Market Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update Quantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="Add Books To Library.resx">
       <DependentUpon>Add Books To Library.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Books To Market.resx">
+      <DependentUpon>Add Books To Market.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update Library Data.resx">
       <DependentUpon>Update Library Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Market Data.resx">
+      <DependentUpon>Update Market Data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Quantity.resx">
       <DependentUpon>Update Quantity.cs</DependentUpon>

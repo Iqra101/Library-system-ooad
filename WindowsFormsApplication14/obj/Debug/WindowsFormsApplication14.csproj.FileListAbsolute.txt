@@ -53,7 +53,6 @@ C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsA
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Admin.resources
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Delete_Books_From_Library.resources
 C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Library_Data.resources
-C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Library_Date.resources
 C:\Users\Hussaini Computers\Desktop\New folder (2)\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe
 C:\Users\Hussaini Computers\Desktop\New folder (2)\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.pdb
 C:\Users\Hussaini Computers\Desktop\New folder (2)\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csprojResolveAssemblyReference.cache
@@ -91,3 +90,7 @@ E:\pull\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsAppl
 E:\pull\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csproj.GenerateResource.Cache
 E:\pull\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe
 E:\pull\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.pdb
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Add_Books_To_Market.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Issue_Book.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Market_Data.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Quantity.resources

@@ -108,5 +108,14 @@ namespace WcfService1
                 }
             }
         }
+
+        public void AddBooksToMar(string name, string location, string price)
+        {
+            Book b = new Book();
+            b.Name = name;
+            b.Location = location;
+            b.Price = price;
+            Bookdl.AddBookToMar(b);
+        }
     }
 }

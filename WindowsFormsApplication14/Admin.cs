@@ -30,5 +30,13 @@ namespace WindowsFormsApplication14
             this.Hide();
             a.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Update_Market_Data b = new Update_Market_Data();
+            this.Hide();
+            b.Show();
+        }
     }
 }

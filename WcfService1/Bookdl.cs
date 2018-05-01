@@ -16,7 +16,7 @@ namespace WcfService1
         }
         public static void AddBookToMar(Book b)
         {
-
+            Market.Add(b);
         }
         public static void UpdatePrice(Book b)
         {
