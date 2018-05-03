@@ -25,6 +25,10 @@ namespace WcfService1
         {
             return Bookdl.DeleteBookFromLib(name, Location);
         }
+        public bool DeleteBookFromMar(string name, string location)
+        {
+            return Bookdl.DeleteBookFromMar(name, location);
+        }
         public bool UpdateQuantity(string name, string Location, string quantity)
         {
             return Bookdl.UpdateQuantity(name, Location, quantity);

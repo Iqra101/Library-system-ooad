@@ -37,3 +37,9 @@ C:\Users\Hussaini Computers\Desktop\New folder (3)\Library-system-ooad\WcfServic
 C:\Users\Hussaini Computers\Desktop\New folder (3)\Library-system-ooad\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
 C:\Users\Hussaini Computers\Desktop\New folder (3)\Library-system-ooad\WcfService1\obj\Debug\WcfService1.dll
 C:\Users\Hussaini Computers\Desktop\New folder (3)\Library-system-ooad\WcfService1\obj\Debug\WcfService1.pdb
+E:\Pull Kro dobara\Library-system-ooad\WcfService1\bin\WcfService1.dll.config
+E:\Pull Kro dobara\Library-system-ooad\WcfService1\bin\WcfService1.dll
+E:\Pull Kro dobara\Library-system-ooad\WcfService1\bin\WcfService1.pdb
+E:\Pull Kro dobara\Library-system-ooad\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+E:\Pull Kro dobara\Library-system-ooad\WcfService1\obj\Debug\WcfService1.dll
+E:\Pull Kro dobara\Library-system-ooad\WcfService1\obj\Debug\WcfService1.pdb

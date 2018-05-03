@@ -72,6 +72,12 @@
     <Compile Include="adminLogin.Designer.cs">
       <DependentUpon>adminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delete Book From Market.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Book From Market.Designer.cs">
+      <DependentUpon>Delete Book From Market.cs</DependentUpon>
+    </Compile>
     <Compile Include="Delete Books From Library.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx">
       <DependentUpon>adminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete Book From Market.resx">
+      <DependentUpon>Delete Book From Market.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Delete Books From Library.resx">
       <DependentUpon>Delete Books From Library.cs</DependentUpon>

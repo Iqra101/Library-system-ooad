@@ -31,7 +31,9 @@ namespace WindowsFormsApplication14
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Delete_Book_From_Market db = new Delete_Book_From_Market();
+            this.Hide();
+            db.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

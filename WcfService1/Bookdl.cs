@@ -66,9 +66,19 @@ namespace WcfService1
 
 
         }
-        public static void DeleteBookFromMar(Book b)
+        public static bool DeleteBookFromMar(string name, string location)
         {
-            
+            bool isFound = false;
+            foreach(Book b in Market)
+            {
+                if(b.Name == name && b.Location == location)
+                {
+                    Market.Remove(b);
+                    isFound = true;
+                    break;
+                }
+            }
+            return isFound;
         }
         public static List<Book> SearchBookFromLibrary(string name)
         {

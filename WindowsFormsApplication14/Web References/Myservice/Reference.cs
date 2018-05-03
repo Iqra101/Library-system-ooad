@@ -31,6 +31,8 @@ namespace WindowsFormsApplication14.Myservice {
         
         private System.Threading.SendOrPostCallback AddBooksToMarOperationCompleted;
         
+        private System.Threading.SendOrPostCallback DeleteBookFromMarOperationCompleted;
+        
         private System.Threading.SendOrPostCallback AddBookToLibOperationCompleted;
         
         private System.Threading.SendOrPostCallback IssueBookOperationCompleted;
@@ -95,6 +97,9 @@ namespace WindowsFormsApplication14.Myservice {
         public event AddBooksToMarCompletedEventHandler AddBooksToMarCompleted;
         
         /// <remarks/>
+        public event DeleteBookFromMarCompletedEventHandler DeleteBookFromMarCompleted;
+        
+        /// <remarks/>
         public event AddBookToLibCompletedEventHandler AddBookToLibCompleted;
         
         /// <remarks/>
@@ -156,6 +161,38 @@ namespace WindowsFormsApplication14.Myservice {
             if ((this.AddBooksToMarCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.AddBooksToMarCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/DeleteBookFromMar", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void DeleteBookFromMar([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, out bool DeleteBookFromMarResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DeleteBookFromMarResultSpecified) {
+            object[] results = this.Invoke("DeleteBookFromMar", new object[] {
+                        name,
+                        location});
+            DeleteBookFromMarResult = ((bool)(results[0]));
+            DeleteBookFromMarResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void DeleteBookFromMarAsync(string name, string location) {
+            this.DeleteBookFromMarAsync(name, location, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteBookFromMarAsync(string name, string location, object userState) {
+            if ((this.DeleteBookFromMarOperationCompleted == null)) {
+                this.DeleteBookFromMarOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteBookFromMarOperationCompleted);
+            }
+            this.InvokeAsync("DeleteBookFromMar", new object[] {
+                        name,
+                        location}, this.DeleteBookFromMarOperationCompleted, userState);
+        }
+        
+        private void OnDeleteBookFromMarOperationCompleted(object arg) {
+            if ((this.DeleteBookFromMarCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteBookFromMarCompleted(this, new DeleteBookFromMarCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -584,6 +621,40 @@ namespace WindowsFormsApplication14.Myservice {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
     public delegate void AddBooksToMarCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void DeleteBookFromMarCompletedEventHandler(object sender, DeleteBookFromMarCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteBookFromMarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteBookFromMarCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool DeleteBookFromMarResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool DeleteBookFromMarResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
