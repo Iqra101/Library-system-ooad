@@ -161,3 +161,6 @@ E:\Pull Kro dobara\Library-system-ooad\WindowsFormsApplication14\obj\Debug\Windo
 E:\Pull Kro dobara\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Userlogin.resources
 E:\Pull Kro dobara\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csproj.GenerateResource.Cache
 E:\Pull Kro dobara\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Delete_Book_From_Market.resources
+E:\Pull Kro dobara ki copy\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe.config
+E:\Pull Kro dobara ki copy\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.exe
+E:\Pull Kro dobara ki copy\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.pdb
