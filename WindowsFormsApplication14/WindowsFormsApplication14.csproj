@@ -72,9 +72,7 @@
     <Compile Include="adminLogin.Designer.cs">
       <DependentUpon>adminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delete Book From Market.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Delete Book From Market.cs" />
     <Compile Include="Delete Book From Market.Designer.cs">
       <DependentUpon>Delete Book From Market.cs</DependentUpon>
     </Compile>
@@ -208,6 +206,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web References\Myservice\Book.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\Myservice\CompositeType.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>

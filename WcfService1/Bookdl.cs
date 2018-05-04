@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Runtime.Serialization;
 
 namespace WcfService1
 {
+    [DataContract]
     public class Bookdl
     {
+        [DataMember]
         public static List<Book> Library = new List<Book>();
+        [DataMember]
         public static List<Book> Market = new List<Book>();
         public static void AddBookToLib(Book b)
         {
@@ -87,6 +91,14 @@ namespace WcfService1
         public static List<Book> SearchBookFromMar(string name)
         {
             return null;
+        }
+        public static List<Book> ShowAllBooksLib()
+        {
+            return Library;
+        }
+        public static List<Book> ShowAllBooksMar()
+        {
+            return Market;
         }
     }
 }

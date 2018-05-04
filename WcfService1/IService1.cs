@@ -37,7 +37,13 @@ namespace WcfService1
         void resetpassword(string username, string password);
  
         [OperationContract]
+  
         string GetData(int value);
+        [OperationContract]
+        List<Book> ShowAllBooksLib();
+        [OperationContract]
+        List<Book> ShowAllBooksMar();
+
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

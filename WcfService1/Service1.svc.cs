@@ -121,5 +121,15 @@ namespace WcfService1
             b.Price = price;
             Bookdl.AddBookToMar(b);
         }
+
+        public List<Book> ShowAllBooksLib()
+        {
+            return Bookdl.ShowAllBooksLib();
+        }
+
+        public List<Book> ShowAllBooksMar()
+        {
+            return Bookdl.ShowAllBooksMar();
+        }
     }
 }

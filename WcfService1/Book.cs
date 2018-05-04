@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Runtime.Serialization;
 
 namespace WcfService1
 {
+    [DataContract]
     public class Book
     {
+        [DataMember]
         private string name;
+        [DataMember]
         private string price;
+        [DataMember]
         private string quantity;
+        [DataMember]
         private string location;
+
 
         public string Name
         {

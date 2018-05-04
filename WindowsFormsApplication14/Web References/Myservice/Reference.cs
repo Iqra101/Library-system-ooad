@@ -53,6 +53,10 @@ namespace WindowsFormsApplication14.Myservice {
         
         private System.Threading.SendOrPostCallback GetDataOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ShowAllBooksLibOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ShowAllBooksMarOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
@@ -128,6 +132,12 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event GetDataCompletedEventHandler GetDataCompleted;
+        
+        /// <remarks/>
+        public event ShowAllBooksLibCompletedEventHandler ShowAllBooksLibCompleted;
+        
+        /// <remarks/>
+        public event ShowAllBooksMarCompletedEventHandler ShowAllBooksMarCompleted;
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
@@ -523,6 +533,64 @@ namespace WindowsFormsApplication14.Myservice {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ShowAllBooksLib", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Book[] ShowAllBooksLib() {
+            object[] results = this.Invoke("ShowAllBooksLib", new object[0]);
+            return ((Book[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowAllBooksLibAsync() {
+            this.ShowAllBooksLibAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ShowAllBooksLibAsync(object userState) {
+            if ((this.ShowAllBooksLibOperationCompleted == null)) {
+                this.ShowAllBooksLibOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowAllBooksLibOperationCompleted);
+            }
+            this.InvokeAsync("ShowAllBooksLib", new object[0], this.ShowAllBooksLibOperationCompleted, userState);
+        }
+        
+        private void OnShowAllBooksLibOperationCompleted(object arg) {
+            if ((this.ShowAllBooksLibCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowAllBooksLibCompleted(this, new ShowAllBooksLibCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ShowAllBooksMar", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Book[] ShowAllBooksMar() {
+            object[] results = this.Invoke("ShowAllBooksMar", new object[0]);
+            return ((Book[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowAllBooksMarAsync() {
+            this.ShowAllBooksMarAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ShowAllBooksMarAsync(object userState) {
+            if ((this.ShowAllBooksMarOperationCompleted == null)) {
+                this.ShowAllBooksMarOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowAllBooksMarOperationCompleted);
+            }
+            this.InvokeAsync("ShowAllBooksMar", new object[0], this.ShowAllBooksMarOperationCompleted, userState);
+        }
+        
+        private void OnShowAllBooksMarOperationCompleted(object arg) {
+            if ((this.ShowAllBooksMarCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowAllBooksMarCompleted(this, new ShowAllBooksMarCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetDataUsingDataContract", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public CompositeType GetDataUsingDataContract([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] CompositeType composite) {
@@ -568,6 +636,67 @@ namespace WindowsFormsApplication14.Myservice {
                 return true;
             }
             return false;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    public partial class Book {
+        
+        private string locationField;
+        
+        private string nameField;
+        
+        private string priceField;
+        
+        private string quantityField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string location {
+            get {
+                return this.locationField;
+            }
+            set {
+                this.locationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string price {
+            get {
+                return this.priceField;
+            }
+            set {
+                this.priceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+            }
         }
     }
     
@@ -894,6 +1023,58 @@ namespace WindowsFormsApplication14.Myservice {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void ShowAllBooksLibCompletedEventHandler(object sender, ShowAllBooksLibCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowAllBooksLibCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowAllBooksLibCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Book[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Book[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void ShowAllBooksMarCompletedEventHandler(object sender, ShowAllBooksMarCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowAllBooksMarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowAllBooksMarCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Book[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Book[])(this.results[0]));
             }
         }
     }

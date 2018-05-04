@@ -79,6 +79,18 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ShowAllBooksLib_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllBooksLib" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllBooksLib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllBooksLibResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllBooksMar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllBooksMar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllBooksMar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllBooksMarResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -133,6 +145,14 @@
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllBooksLib">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllBooksLib" message="tns:IService1_ShowAllBooksLib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllBooksLibResponse" message="tns:IService1_ShowAllBooksLib_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllBooksMar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllBooksMar" message="tns:IService1_ShowAllBooksMar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllBooksMarResponse" message="tns:IService1_ShowAllBooksMar_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -242,6 +262,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllBooksLib">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllBooksLib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllBooksMar">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllBooksMar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
