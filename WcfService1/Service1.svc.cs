@@ -131,5 +131,15 @@ namespace WcfService1
         {
             return Bookdl.ShowAllBooksMar();
         }
+
+        public List<Book> SearchBookFromLib(string name)
+        {
+            return Bookdl.SearchBookFromLibrary(name);
+        }
+
+        public List<Book> SearchBookFromMar(string name)
+        {
+            return Bookdl.SearchBookFromMar(name);
+        }
     }
 }

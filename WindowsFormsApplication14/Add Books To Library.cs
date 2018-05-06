@@ -42,6 +42,7 @@ namespace WindowsFormsApplication14
             server.ShowAllBooksLib();
             source.DataSource = server.ShowAllBooksLib();
             dataGridView1.DataSource = source;
+            dataGridView1.Columns[2].Visible = false;
         }
     }
 }

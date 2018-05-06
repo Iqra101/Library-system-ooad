@@ -43,7 +43,10 @@ namespace WcfService1
         List<Book> ShowAllBooksLib();
         [OperationContract]
         List<Book> ShowAllBooksMar();
-
+        [OperationContract]
+        List<Book> SearchBookFromLib(string name);
+        [OperationContract]
+        List<Book> SearchBookFromMar(string name);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

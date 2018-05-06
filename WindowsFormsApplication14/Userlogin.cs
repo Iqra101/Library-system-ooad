@@ -37,14 +37,16 @@ namespace WindowsFormsApplication14
             myserver.isvaliduser(textBox1.Text, textBox2.Text, out isvaliduser, out isvaliduserpassed);
             if (isvaliduser == true)
             {
-                MessageBox.Show("validuser");
+                Welcome w = new Welcome();
+                this.Hide();
+                w.Show();
             }
             else
             {
                 MessageBox.Show("invaliduser");
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
-            textBox1.Text = "";
-            textBox2.Text = "";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -57,6 +57,10 @@ namespace WindowsFormsApplication14.Myservice {
         
         private System.Threading.SendOrPostCallback ShowAllBooksMarOperationCompleted;
         
+        private System.Threading.SendOrPostCallback SearchBookFromLibOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SearchBookFromMarOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
@@ -138,6 +142,12 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event ShowAllBooksMarCompletedEventHandler ShowAllBooksMarCompleted;
+        
+        /// <remarks/>
+        public event SearchBookFromLibCompletedEventHandler SearchBookFromLibCompleted;
+        
+        /// <remarks/>
+        public event SearchBookFromMarCompletedEventHandler SearchBookFromMarCompleted;
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
@@ -587,6 +597,68 @@ namespace WindowsFormsApplication14.Myservice {
             if ((this.ShowAllBooksMarCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ShowAllBooksMarCompleted(this, new ShowAllBooksMarCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchBookFromLib", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Book[] SearchBookFromLib([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            object[] results = this.Invoke("SearchBookFromLib", new object[] {
+                        name});
+            return ((Book[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchBookFromLibAsync(string name) {
+            this.SearchBookFromLibAsync(name, null);
+        }
+        
+        /// <remarks/>
+        public void SearchBookFromLibAsync(string name, object userState) {
+            if ((this.SearchBookFromLibOperationCompleted == null)) {
+                this.SearchBookFromLibOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchBookFromLibOperationCompleted);
+            }
+            this.InvokeAsync("SearchBookFromLib", new object[] {
+                        name}, this.SearchBookFromLibOperationCompleted, userState);
+        }
+        
+        private void OnSearchBookFromLibOperationCompleted(object arg) {
+            if ((this.SearchBookFromLibCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchBookFromLibCompleted(this, new SearchBookFromLibCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchBookFromMar", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Book[] SearchBookFromMar([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            object[] results = this.Invoke("SearchBookFromMar", new object[] {
+                        name});
+            return ((Book[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchBookFromMarAsync(string name) {
+            this.SearchBookFromMarAsync(name, null);
+        }
+        
+        /// <remarks/>
+        public void SearchBookFromMarAsync(string name, object userState) {
+            if ((this.SearchBookFromMarOperationCompleted == null)) {
+                this.SearchBookFromMarOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchBookFromMarOperationCompleted);
+            }
+            this.InvokeAsync("SearchBookFromMar", new object[] {
+                        name}, this.SearchBookFromMarOperationCompleted, userState);
+        }
+        
+        private void OnSearchBookFromMarOperationCompleted(object arg) {
+            if ((this.SearchBookFromMarCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchBookFromMarCompleted(this, new SearchBookFromMarCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1066,6 +1138,58 @@ namespace WindowsFormsApplication14.Myservice {
         private object[] results;
         
         internal ShowAllBooksMarCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Book[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Book[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void SearchBookFromLibCompletedEventHandler(object sender, SearchBookFromLibCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchBookFromLibCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchBookFromLibCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Book[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Book[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void SearchBookFromMarCompletedEventHandler(object sender, SearchBookFromMarCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchBookFromMarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchBookFromMarCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

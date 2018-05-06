@@ -72,7 +72,9 @@
     <Compile Include="adminLogin.Designer.cs">
       <DependentUpon>adminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delete Book From Market.cs" />
+    <Compile Include="Delete Book From Market.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Delete Book From Market.Designer.cs">
       <DependentUpon>Delete Book From Market.cs</DependentUpon>
     </Compile>
@@ -108,6 +110,18 @@
     <Compile Include="Reset Password.Designer.cs">
       <DependentUpon>Reset Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="Search From Library.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search From Library.Designer.cs">
+      <DependentUpon>Search From Library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search From Market.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search From Market.Designer.cs">
+      <DependentUpon>Search From Market.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign Up.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +156,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Add Books To Library.resx">
       <DependentUpon>Add Books To Library.cs</DependentUpon>
@@ -182,6 +202,12 @@
     <EmbeddedResource Include="Reset Password.resx">
       <DependentUpon>Reset Password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search From Library.resx">
+      <DependentUpon>Search From Library.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search From Market.resx">
+      <DependentUpon>Search From Market.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sign Up.resx">
       <DependentUpon>Sign Up.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Userlogin.resx">
       <DependentUpon>Userlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

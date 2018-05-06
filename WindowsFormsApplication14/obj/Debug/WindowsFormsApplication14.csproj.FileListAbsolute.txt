@@ -187,3 +187,7 @@ E:\pulling\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsA
 E:\pulling\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Quantity.resources
 E:\pulling\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Userlogin.resources
 E:\pulling\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csproj.GenerateResource.Cache
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Delete_Book_From_Market.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Search_From_Library.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Welcome.resources
+C:\Users\Hussaini Computers\Desktop\New folder\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Search_From_Market.resources

@@ -86,11 +86,27 @@ namespace WcfService1
         }
         public static List<Book> SearchBookFromLibrary(string name)
         {
-            return null;
+            List<Book> books = new List<Book>();
+            foreach(Book b in Library)
+            {
+                if(b.Name == name)
+                {
+                    books.Add(b);
+                }
+            }
+            return books;
         }
         public static List<Book> SearchBookFromMar(string name)
         {
-            return null;
+            List<Book> books = new List<Book>();
+            foreach (Book b in Market)
+            {
+                if (b.Name == name)
+                {
+                    books.Add(b);
+                }
+            }
+            return books;
         }
         public static List<Book> ShowAllBooksLib()
         {
