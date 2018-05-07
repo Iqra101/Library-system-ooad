@@ -42,6 +42,14 @@ namespace WindowsFormsApplication14
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("Book has been issued");
+           
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form1 a = new Form1();
+            this.Hide();
+            a.Show();
         }
     }
 }

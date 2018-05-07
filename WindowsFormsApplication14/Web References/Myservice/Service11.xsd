@@ -44,22 +44,6 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="IssueBook">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="IssueBookResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="IssueBookResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="SendReq">
     <xs:complexType>
       <xs:sequence>

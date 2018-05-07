@@ -26,9 +26,7 @@ namespace WindowsFormsApplication14
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Issue_Book i = new Issue_Book();
-            this.Hide();
-            i.Show();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -44,5 +44,12 @@ namespace WindowsFormsApplication14
             dataGridView1.DataSource = source;
             dataGridView1.Columns[2].Visible = false;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 a = new Form1();
+            this.Hide();
+            a.Show();
+        }
     }
 }

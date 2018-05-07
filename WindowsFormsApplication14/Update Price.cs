@@ -42,5 +42,12 @@ namespace WindowsFormsApplication14
             textBox2.Text = "";
             textBox3.Text = "";
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 a = new Form1();
+            this.Hide();
+            a.Show();
+        }
     }
 }

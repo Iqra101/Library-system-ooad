@@ -35,8 +35,6 @@ namespace WindowsFormsApplication14.Myservice {
         
         private System.Threading.SendOrPostCallback AddBookToLibOperationCompleted;
         
-        private System.Threading.SendOrPostCallback IssueBookOperationCompleted;
-        
         private System.Threading.SendOrPostCallback SendReqOperationCompleted;
         
         private System.Threading.SendOrPostCallback ShowAllReqOperationCompleted;
@@ -115,9 +113,6 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event AddBookToLibCompletedEventHandler AddBookToLibCompleted;
-        
-        /// <remarks/>
-        public event IssueBookCompletedEventHandler IssueBookCompleted;
         
         /// <remarks/>
         public event SendReqCompletedEventHandler SendReqCompleted;
@@ -260,40 +255,6 @@ namespace WindowsFormsApplication14.Myservice {
             if ((this.AddBookToLibCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.AddBookToLibCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/IssueBook", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void IssueBook([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string quantity, out bool IssueBookResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool IssueBookResultSpecified) {
-            object[] results = this.Invoke("IssueBook", new object[] {
-                        name,
-                        Location,
-                        quantity});
-            IssueBookResult = ((bool)(results[0]));
-            IssueBookResultSpecified = ((bool)(results[1]));
-        }
-        
-        /// <remarks/>
-        public void IssueBookAsync(string name, string Location, string quantity) {
-            this.IssueBookAsync(name, Location, quantity, null);
-        }
-        
-        /// <remarks/>
-        public void IssueBookAsync(string name, string Location, string quantity, object userState) {
-            if ((this.IssueBookOperationCompleted == null)) {
-                this.IssueBookOperationCompleted = new System.Threading.SendOrPostCallback(this.OnIssueBookOperationCompleted);
-            }
-            this.InvokeAsync("IssueBook", new object[] {
-                        name,
-                        Location,
-                        quantity}, this.IssueBookOperationCompleted, userState);
-        }
-        
-        private void OnIssueBookOperationCompleted(object arg) {
-            if ((this.IssueBookCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.IssueBookCompleted(this, new IssueBookCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1005,40 +966,6 @@ namespace WindowsFormsApplication14.Myservice {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
     public delegate void AddBookToLibCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
-    public delegate void IssueBookCompletedEventHandler(object sender, IssueBookCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class IssueBookCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal IssueBookCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool IssueBookResult {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public bool IssueBookResultSpecified {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[1]));
-            }
-        }
-    }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]

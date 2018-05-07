@@ -50,5 +50,12 @@ namespace WindowsFormsApplication14
             this.Hide();
             sr.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            adminLogin a = new adminLogin();
+            this.Hide();
+            a.Show();
+        }
     }
 }

@@ -19,8 +19,6 @@ namespace WcfService1
         [OperationContract]
         void AddBookToLib(string name, string Location, string Quantity);
         [OperationContract]
-        bool IssueBook(string name, string Location, string quantity);
-        [OperationContract]
         bool SendReq(string username, string bookname);
         [OperationContract]
         List<IssueBooks> ShowAllReq();

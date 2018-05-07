@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,19 +45,9 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(74, 149);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(177, 32);
-            this.button5.TabIndex = 9;
-            this.button5.Text = " Issue Book";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(74, 109);
+            this.button3.Location = new System.Drawing.Point(74, 135);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(177, 34);
             this.button3.TabIndex = 8;
@@ -68,7 +57,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(74, 69);
+            this.button2.Location = new System.Drawing.Point(74, 87);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(177, 34);
             this.button2.TabIndex = 7;
@@ -78,7 +67,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(74, 24);
+            this.button1.Location = new System.Drawing.Point(74, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 39);
             this.button1.TabIndex = 6;
@@ -88,11 +77,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(74, 187);
+            this.button6.Location = new System.Drawing.Point(74, 180);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(177, 32);
             this.button6.TabIndex = 11;
-            this.button6.Text = "See Requests";
+            this.button6.Text = "See Requests and issue book";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -103,7 +92,6 @@
             this.ClientSize = new System.Drawing.Size(309, 302);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -116,7 +104,6 @@
         #endregion
 
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

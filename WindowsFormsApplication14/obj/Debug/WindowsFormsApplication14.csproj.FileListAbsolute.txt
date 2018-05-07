@@ -268,7 +268,6 @@ E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFor
 E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Delete_Books_From_Library.resources
 E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Forget_Password.resources
 E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Form1.resources
-E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Issue_Book.resources
 E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Properties.Resources.resources
 E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Reset_Password.resources
 E:\maryammmmm\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Search_From_Library.resources

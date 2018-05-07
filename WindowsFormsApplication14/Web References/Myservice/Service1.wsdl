@@ -25,12 +25,6 @@
   <wsdl:message name="IService1_AddBookToLib_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddBookToLibResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_IssueBook_InputMessage">
-    <wsdl:part name="parameters" element="tns:IssueBook" />
-  </wsdl:message>
-  <wsdl:message name="IService1_IssueBook_OutputMessage">
-    <wsdl:part name="parameters" element="tns:IssueBookResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_SendReq_InputMessage">
     <wsdl:part name="parameters" element="tns:SendReq" />
   </wsdl:message>
@@ -140,10 +134,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddBookToLib" message="tns:IService1_AddBookToLib_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddBookToLibResponse" message="tns:IService1_AddBookToLib_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="IssueBook">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IssueBook" message="tns:IService1_IssueBook_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IssueBookResponse" message="tns:IService1_IssueBook_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="SendReq">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendReq" message="tns:IService1_SendReq_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendReqResponse" message="tns:IService1_SendReq_OutputMessage" />
@@ -231,15 +221,6 @@
     </wsdl:operation>
     <wsdl:operation name="AddBookToLib">
       <soap:operation soapAction="http://tempuri.org/IService1/AddBookToLib" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="IssueBook">
-      <soap:operation soapAction="http://tempuri.org/IService1/IssueBook" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

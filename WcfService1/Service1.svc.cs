@@ -37,10 +37,7 @@ namespace WcfService1
         {
             return Bookdl.UpdatePrice(name, Location, price);
         }
-        public bool IssueBook(string name, string Location, string Quantity)
-        {
-            return Bookdl.IssueBook(name, Location, Quantity);
-        }
+       
         public bool forgetpassword(string username, string question, string answer)
         {
             bool isFound = false;
@@ -70,6 +67,7 @@ namespace WcfService1
                             isf = true;
                             
                             IssueBooksdl.SendReq(i);
+                            
                         }
                     }
                 }
