@@ -152,6 +152,12 @@
     <Compile Include="Update Market Data.Designer.cs">
       <DependentUpon>Update Market Data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update Price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Price.Designer.cs">
+      <DependentUpon>Update Price.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update Quantity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update Market Data.resx">
       <DependentUpon>Update Market Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Price.resx">
+      <DependentUpon>Update Price.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Quantity.resx">
       <DependentUpon>Update Quantity.cs</DependentUpon>

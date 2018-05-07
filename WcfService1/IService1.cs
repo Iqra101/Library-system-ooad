@@ -28,6 +28,9 @@ namespace WcfService1
         
         [OperationContract]
         bool DeleteBookFromLib(string name, string Location);
+
+        [OperationContract]
+        bool UpdatePrice(string name, string Location, string price);
         [OperationContract]
         bool UpdateQuantity(string name, string Location, string quantity);
 

@@ -43,6 +43,8 @@ namespace WindowsFormsApplication14.Myservice {
         
         private System.Threading.SendOrPostCallback DeleteBookFromLibOperationCompleted;
         
+        private System.Threading.SendOrPostCallback UpdatePriceOperationCompleted;
+        
         private System.Threading.SendOrPostCallback UpdateQuantityOperationCompleted;
         
         private System.Threading.SendOrPostCallback forgetpasswordOperationCompleted;
@@ -125,6 +127,9 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event DeleteBookFromLibCompletedEventHandler DeleteBookFromLibCompleted;
+        
+        /// <remarks/>
+        public event UpdatePriceCompletedEventHandler UpdatePriceCompleted;
         
         /// <remarks/>
         public event UpdateQuantityCompletedEventHandler UpdateQuantityCompleted;
@@ -382,6 +387,40 @@ namespace WindowsFormsApplication14.Myservice {
             if ((this.DeleteBookFromLibCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.DeleteBookFromLibCompleted(this, new DeleteBookFromLibCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/UpdatePrice", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void UpdatePrice([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string price, out bool UpdatePriceResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdatePriceResultSpecified) {
+            object[] results = this.Invoke("UpdatePrice", new object[] {
+                        name,
+                        Location,
+                        price});
+            UpdatePriceResult = ((bool)(results[0]));
+            UpdatePriceResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void UpdatePriceAsync(string name, string Location, string price) {
+            this.UpdatePriceAsync(name, Location, price, null);
+        }
+        
+        /// <remarks/>
+        public void UpdatePriceAsync(string name, string Location, string price, object userState) {
+            if ((this.UpdatePriceOperationCompleted == null)) {
+                this.UpdatePriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdatePriceOperationCompleted);
+            }
+            this.InvokeAsync("UpdatePrice", new object[] {
+                        name,
+                        Location,
+                        price}, this.UpdatePriceOperationCompleted, userState);
+        }
+        
+        private void OnUpdatePriceOperationCompleted(object arg) {
+            if ((this.UpdatePriceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdatePriceCompleted(this, new UpdatePriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1088,6 +1127,40 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public bool DeleteBookFromLibResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void UpdatePriceCompletedEventHandler(object sender, UpdatePriceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdatePriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdatePriceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool UpdatePriceResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool UpdatePriceResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

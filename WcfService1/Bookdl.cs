@@ -39,6 +39,19 @@ namespace WcfService1
             }
             return isUpdated;
         }
+        public static bool UpdatePrice(string name, string Location, string price)
+        {
+            bool isUpdated = false;
+            foreach (Book b in Market)
+            {
+                if (b.Name == name && b.Location == Location)
+                {
+                    b.Price = price;
+                    isUpdated = true;
+                }
+            }
+            return isUpdated;
+        }
         public static bool IssueBook(string name, string Location, string quantity)
         {
             bool issue = false;

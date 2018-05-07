@@ -26,7 +26,9 @@ namespace WindowsFormsApplication14
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Update_Price u = new Update_Price();
+            this.Hide();
+            u.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

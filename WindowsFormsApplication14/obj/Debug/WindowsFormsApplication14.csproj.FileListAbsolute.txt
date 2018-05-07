@@ -225,3 +225,32 @@ E:\aqsa k lye pull kro\Library-system-ooad\WindowsFormsApplication14\obj\Debug\W
 E:\aqsa phir kro pull\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe.config
 E:\aqsa phir kro pull\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.exe
 E:\aqsa phir kro pull\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.pdb
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe.config
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.exe
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.pdb
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csprojResolveAssemblyReference.cache
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Add_Books_To_Library.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Add_Books_To_Market.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Admin.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.adminLogin.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Delete_Book_From_Market.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Delete_Books_From_Library.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Forget_Password.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Form1.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Issue_Book.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Properties.Resources.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Reset_Password.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Search_From_Library.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Search_From_Market.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.See_Requests.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Send_Request.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Sign_Up.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Library_Data.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Market_Data.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Price.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Update_Quantity.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Userlogin.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Welcome.resources
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csproj.GenerateResource.Cache
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe
+E:\maryam\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.pdb

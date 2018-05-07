@@ -33,6 +33,10 @@ namespace WcfService1
         {
             return Bookdl.UpdateQuantity(name, Location, quantity);
         }
+        public bool UpdatePrice(string name, string Location, string price)
+        {
+            return Bookdl.UpdatePrice(name, Location, price);
+        }
         public bool IssueBook(string name, string Location, string Quantity)
         {
             return Bookdl.IssueBook(name, Location, Quantity);
