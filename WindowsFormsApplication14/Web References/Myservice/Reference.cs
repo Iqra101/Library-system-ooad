@@ -37,6 +37,10 @@ namespace WindowsFormsApplication14.Myservice {
         
         private System.Threading.SendOrPostCallback IssueBookOperationCompleted;
         
+        private System.Threading.SendOrPostCallback SendReqOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ShowAllReqOperationCompleted;
+        
         private System.Threading.SendOrPostCallback DeleteBookFromLibOperationCompleted;
         
         private System.Threading.SendOrPostCallback UpdateQuantityOperationCompleted;
@@ -112,6 +116,12 @@ namespace WindowsFormsApplication14.Myservice {
         
         /// <remarks/>
         public event IssueBookCompletedEventHandler IssueBookCompleted;
+        
+        /// <remarks/>
+        public event SendReqCompletedEventHandler SendReqCompleted;
+        
+        /// <remarks/>
+        public event ShowAllReqCompletedEventHandler ShowAllReqCompleted;
         
         /// <remarks/>
         public event DeleteBookFromLibCompletedEventHandler DeleteBookFromLibCompleted;
@@ -279,6 +289,67 @@ namespace WindowsFormsApplication14.Myservice {
             if ((this.IssueBookCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.IssueBookCompleted(this, new IssueBookCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SendReq", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void SendReq([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string bookname, out bool SendReqResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool SendReqResultSpecified) {
+            object[] results = this.Invoke("SendReq", new object[] {
+                        username,
+                        bookname});
+            SendReqResult = ((bool)(results[0]));
+            SendReqResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void SendReqAsync(string username, string bookname) {
+            this.SendReqAsync(username, bookname, null);
+        }
+        
+        /// <remarks/>
+        public void SendReqAsync(string username, string bookname, object userState) {
+            if ((this.SendReqOperationCompleted == null)) {
+                this.SendReqOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSendReqOperationCompleted);
+            }
+            this.InvokeAsync("SendReq", new object[] {
+                        username,
+                        bookname}, this.SendReqOperationCompleted, userState);
+        }
+        
+        private void OnSendReqOperationCompleted(object arg) {
+            if ((this.SendReqCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SendReqCompleted(this, new SendReqCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ShowAllReq", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public IssueBooks[] ShowAllReq() {
+            object[] results = this.Invoke("ShowAllReq", new object[0]);
+            return ((IssueBooks[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowAllReqAsync() {
+            this.ShowAllReqAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ShowAllReqAsync(object userState) {
+            if ((this.ShowAllReqOperationCompleted == null)) {
+                this.ShowAllReqOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowAllReqOperationCompleted);
+            }
+            this.InvokeAsync("ShowAllReq", new object[0], this.ShowAllReqOperationCompleted, userState);
+        }
+        
+        private void OnShowAllReqOperationCompleted(object arg) {
+            if ((this.ShowAllReqCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowAllReqCompleted(this, new ShowAllReqCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -717,6 +788,88 @@ namespace WindowsFormsApplication14.Myservice {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    public partial class IssueBooks {
+        
+        private string bookName1Field;
+        
+        private string userName1Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string BookName1 {
+            get {
+                return this.bookName1Field;
+            }
+            set {
+                this.bookName1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string UserName1 {
+            get {
+                return this.userName1Field;
+            }
+            set {
+                this.userName1Field = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    public partial class CompositeType {
+        
+        private bool boolValueField;
+        
+        private bool boolValueFieldSpecified;
+        
+        private string stringValueField;
+        
+        /// <remarks/>
+        public bool BoolValue {
+            get {
+                return this.boolValueField;
+            }
+            set {
+                this.boolValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool BoolValueSpecified {
+            get {
+                return this.boolValueFieldSpecified;
+            }
+            set {
+                this.boolValueFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string StringValue {
+            get {
+                return this.stringValueField;
+            }
+            set {
+                this.stringValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
     public partial class Book {
         
         private string locationField;
@@ -768,53 +921,6 @@ namespace WindowsFormsApplication14.Myservice {
             }
             set {
                 this.quantityField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
-    public partial class CompositeType {
-        
-        private bool boolValueField;
-        
-        private bool boolValueFieldSpecified;
-        
-        private string stringValueField;
-        
-        /// <remarks/>
-        public bool BoolValue {
-            get {
-                return this.boolValueField;
-            }
-            set {
-                this.boolValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BoolValueSpecified {
-            get {
-                return this.boolValueFieldSpecified;
-            }
-            set {
-                this.boolValueFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string StringValue {
-            get {
-                return this.stringValueField;
-            }
-            set {
-                this.stringValueField = value;
             }
         }
     }
@@ -891,6 +997,66 @@ namespace WindowsFormsApplication14.Myservice {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void SendReqCompletedEventHandler(object sender, SendReqCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SendReqCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SendReqCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool SendReqResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool SendReqResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void ShowAllReqCompletedEventHandler(object sender, ShowAllReqCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowAllReqCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowAllReqCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public IssueBooks[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((IssueBooks[])(this.results[0]));
             }
         }
     }

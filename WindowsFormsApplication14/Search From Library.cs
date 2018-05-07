@@ -43,5 +43,12 @@ namespace WindowsFormsApplication14
             this.Hide();
             w.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Send_Request sr = new Send_Request();
+            this.Hide();
+            sr.Show();
+        }
     }
 }

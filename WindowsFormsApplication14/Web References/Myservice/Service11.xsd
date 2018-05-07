@@ -60,6 +60,33 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SendReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendReqResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowAllReq">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowAllReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowAllReqResult" nillable="true" type="q1:ArrayOfIssueBooks" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="DeleteBookFromLib">
     <xs:complexType>
       <xs:sequence>
@@ -187,7 +214,7 @@
   <xs:element name="ShowAllBooksLibResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowAllBooksLibResult" nillable="true" type="q1:ArrayOfBook" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowAllBooksLibResult" nillable="true" type="q2:ArrayOfBook" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -199,7 +226,7 @@
   <xs:element name="ShowAllBooksMarResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowAllBooksMarResult" nillable="true" type="q2:ArrayOfBook" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowAllBooksMarResult" nillable="true" type="q3:ArrayOfBook" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -213,7 +240,7 @@
   <xs:element name="SearchBookFromLibResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchBookFromLibResult" nillable="true" type="q3:ArrayOfBook" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchBookFromLibResult" nillable="true" type="q4:ArrayOfBook" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -227,21 +254,21 @@
   <xs:element name="SearchBookFromMarResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchBookFromMarResult" nillable="true" type="q4:ArrayOfBook" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchBookFromMarResult" nillable="true" type="q5:ArrayOfBook" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="composite" nillable="true" type="q5:CompositeType" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="composite" nillable="true" type="q6:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q6:CompositeType" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q7:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -49,7 +49,35 @@ namespace WcfService1
             }
             return isFound;
         }
+        public bool SendReq(string username, string bookname)
+        {
+            bool isf = false;
+            IssueBooks i = new IssueBooks();
+            i.UserName1 = username;
+            i.BookName1 = bookname;
+            foreach (User u in Userdl.user)
+            {
+                if (u.Username == username)
+                {
+                    foreach (Book b in Bookdl.Library)
+                    {
+                        if (b.Name == bookname)
+                        {
+                            isf = true;
+                            
+                            IssueBooksdl.SendReq(i);
+                        }
+                    }
+                }
+            }
+            return isf;
 
+        }
+        public List<IssueBooks> ShowAllReq()
+        {
+            return IssueBooksdl.ShowAllReq();
+        }
+       
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);

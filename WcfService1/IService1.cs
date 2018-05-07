@@ -21,6 +21,12 @@ namespace WcfService1
         [OperationContract]
         bool IssueBook(string name, string Location, string quantity);
         [OperationContract]
+        bool SendReq(string username, string bookname);
+        [OperationContract]
+        List<IssueBooks> ShowAllReq();
+
+        
+        [OperationContract]
         bool DeleteBookFromLib(string name, string Location);
         [OperationContract]
         bool UpdateQuantity(string name, string Location, string quantity);

@@ -122,6 +122,18 @@
     <Compile Include="Search From Market.Designer.cs">
       <DependentUpon>Search From Market.cs</DependentUpon>
     </Compile>
+    <Compile Include="See Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="See Requests.Designer.cs">
+      <DependentUpon>See Requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Send Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Send Request.Designer.cs">
+      <DependentUpon>Send Request.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign Up.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +220,12 @@
     <EmbeddedResource Include="Search From Market.resx">
       <DependentUpon>Search From Market.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="See Requests.resx">
+      <DependentUpon>See Requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Send Request.resx">
+      <DependentUpon>Send Request.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sign Up.resx">
       <DependentUpon>Sign Up.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +257,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Myservice\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Myservice\IssueBooks.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Myservice\Reference.map">
