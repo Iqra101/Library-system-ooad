@@ -219,3 +219,6 @@ E:\aj wala project\Library-system-ooad\WindowsFormsApplication14\obj\Debug\Windo
 E:\aj wala project\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.Welcome.resources
 E:\aj wala project\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.csproj.GenerateResource.Cache
 E:\aj wala project\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.See_Requests.resources
+E:\aqsa k lye pull kro\Library-system-ooad\WindowsFormsApplication14\bin\Debug\WindowsFormsApplication14.exe.config
+E:\aqsa k lye pull kro\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.exe
+E:\aqsa k lye pull kro\Library-system-ooad\WindowsFormsApplication14\obj\Debug\WindowsFormsApplication14.pdb
