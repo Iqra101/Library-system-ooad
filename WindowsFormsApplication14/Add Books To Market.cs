@@ -40,5 +40,15 @@ namespace WindowsFormsApplication14
             this.Hide();
             a.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            BindingSource source = new BindingSource();
+            Myservice.Service1 server = new Myservice.Service1();
+            server.ShowAllBooksMar();
+            source.DataSource = server.ShowAllBooksMar();
+            dataGridView1.DataSource = source;
+            dataGridView1.Columns[3].Visible = false;
+        }
     }
 }

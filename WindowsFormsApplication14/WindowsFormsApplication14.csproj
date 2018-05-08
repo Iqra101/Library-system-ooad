@@ -104,6 +104,12 @@
     <Compile Include="Reset Password.Designer.cs">
       <DependentUpon>Reset Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rider.Designer.cs">
+      <DependentUpon>Rider.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search From Library.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </Compile>
     <EmbeddedResource Include="Reset Password.resx">
       <DependentUpon>Reset Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rider.resx">
+      <DependentUpon>Rider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search From Library.resx">
       <DependentUpon>Search From Library.cs</DependentUpon>

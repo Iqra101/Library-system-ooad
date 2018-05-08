@@ -67,3 +67,9 @@ E:\maryammmmm\Library-system-ooad\WcfService1\bin\WcfService1.pdb
 E:\maryammmmm\Library-system-ooad\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
 E:\maryammmmm\Library-system-ooad\WcfService1\obj\Debug\WcfService1.dll
 E:\maryammmmm\Library-system-ooad\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\ok1\Desktop\aqsaaaa\Library-system-ooad\WcfService1\bin\WcfService1.dll.config
+C:\Users\ok1\Desktop\aqsaaaa\Library-system-ooad\WcfService1\bin\WcfService1.dll
+C:\Users\ok1\Desktop\aqsaaaa\Library-system-ooad\WcfService1\bin\WcfService1.pdb
+C:\Users\ok1\Desktop\aqsaaaa\Library-system-ooad\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+C:\Users\ok1\Desktop\aqsaaaa\Library-system-ooad\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\ok1\Desktop\aqsaaaa\Library-system-ooad\WcfService1\obj\Debug\WcfService1.pdb

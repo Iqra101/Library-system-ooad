@@ -36,7 +36,9 @@ namespace WindowsFormsApplication14
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            Rider r = new Rider();
+            this.Hide();
+            r.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
